@@ -32,8 +32,8 @@ function fnColorSetInt() {
 
 function fnColorClearInt() {
     clearInterval(colorId)
-    this.isActive = false
-    console.log(this.isActive);
+    refs.startBtn.isActive = false
+    console.log(refs.startBtn.isActive);
 
 
 }
