@@ -8,14 +8,14 @@ let colorId = null
 refs.startBtn.isActive = false
 console.log(refs.startBtn.isActive)
 
-refs.startBtn.addEventListener("click", fnColorSetIntStart)
-refs.stopBtn.addEventListener("click", fnColorSetIntStop)
+refs.startBtn.addEventListener("click", fnColorSetInt)
+refs.stopBtn.addEventListener("click", fnColorClearInt)
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function fnColorSetIntStart() {
+function fnColorSetInt() {
     if (this.isActive) {
         return
     }
@@ -30,7 +30,7 @@ function fnColorSetIntStart() {
 
 }
 
-function fnColorSetIntStop() {
+function fnColorClearInt() {
     clearInterval(colorId)
     this.isActive = false
     console.log(this.isActive);
