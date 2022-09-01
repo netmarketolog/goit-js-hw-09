@@ -11,7 +11,6 @@ const refs = {
     seconds: document.querySelector('span[data-seconds]'),
 }
 
-
 const options = {
     enableTime: true,
     time_24hr: true,
@@ -29,10 +28,6 @@ const options = {
 }
 
 const fp = flatpickr(refs.areaForInputDate, options);
-
-
-
-
 
 const timer = {
         timerId: null,
@@ -57,11 +52,6 @@ const timer = {
                     this.isActive = false;
                     Notiflix.Notify.info("Time is over")
                 }
-
-                // const { days, hours, minutes, seconds } = convertMs(deltaTime)
-
-                // console.log(`${days}:${hours}:${minutes}:${seconds}`);
-
             }, 1000)
         }
 
